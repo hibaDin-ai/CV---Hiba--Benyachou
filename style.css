@@ -246,46 +246,5 @@ body.dark-theme #toggle-dark-mode {
     border-color: var(--accent-color);
 }
 
-/* 7. Responsive Design (Mobile) */
-@media (max-width: 768px) {
-    .cv-container {
-        grid-template-columns: 1fr; 
-    }
-    
-    .sidebar {
-        border-right: none;
-        border-bottom: 1px solid #dee2e6;
-    }
-    
-    body {
-        padding: 0;
-    }
-    
-    .cv-container {
-        border-radius: 0;
-    }
-}
-/* Ce code s'active uniquement lors de la génération du PDF ou de l'impression */
-@media print {
-    /* Force le fond blanc et le texte sombre peu importe le mode actif */
-    body, body.dark-theme, .cv-container, .sidebar {
-        background: #ffffff !important;
-        color: #333333 !important;
-    }
-    
-    /* Masque le bouton Mode Sombre pour qu'il n'apparaisse pas sur le PDF */
-    #toggle-dark-mode {
-        display: none !important;
-    }
 
-    /* Remet les titres dans une couleur sombre et lisible sur papier */
-    h1, h2, h3, body.dark-theme h1, body.dark-theme h3 {
-        color: #2c3e50 !important;
-    }
-    
-    /* Force les liens à s'afficher en noir (sans bleu fluo) */
-    a, body.dark-theme a {
-        color: #333333 !important;
-        text-decoration: none !important;
-    }
-}
+
