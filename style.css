@@ -1,0 +1,291 @@
+/* 1. Reset & Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2c3e50;    /* Bleu sombre pour les titres */
+    --accent-color: #16a085;     /* Vert d'eau pour les éléments importants */
+    --sidebar-bg: #f8f9fa;       /* Fond clair pour la colonne de gauche */
+    --content-bg: #ffffff;       /* Fond blanc pour le contenu principal */
+    --text-color: #333333;       /* Couleur du texte principal */
+    --text-muted: #555555;       /* Couleur du texte secondaire */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #e9ecef;
+    padding: 40px 20px;
+}
+
+/* Style global pour les liens du CV */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+/* 2. Layout Structure (Mise en page) */
+.cv-container {
+    max-width: 950px;
+    margin: 0 auto;
+    background: var(--content-bg);
+    display: grid;
+    grid-template-columns: 300px 1fr; /* Sidebar fixe à 300px, le reste prend l'espace */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* 3. Sidebar Styles (Colonne de gauche) */
+.sidebar {
+    background-color: var(--sidebar-bg);
+    padding: 40px 30px;
+    border-right: 1px solid #dee2e6;
+}
+
+/* Style pour agrandir et centrer la photo */
+#profile {
+    width: 140px;          
+    height: 140px;         
+    border-radius: 50%;    
+    object-fit: cover;     
+    display: block;        
+    margin: 15px auto 25px auto; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+}
+
+#title {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.sidebar h2 {
+    font-size: 1rem;
+    color: var(--accent-color);
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.sidebar h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar p {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    color: var(--text-muted);
+}
+
+.sidebar p i {
+    width: 20px; /* Aligne verticalement les icônes FontAwesome */
+    color: var(--accent-color);
+}
+
+.sidebar ul {
+    list-style-type: none; 
+}
+
+.sidebar ul li {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.sidebar ul li::before {
+    content: "•";
+    color: var(--accent-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* 4. Content Styles (Colonne de droite) */
+.content {
+    padding: 40px;
+}
+
+.content h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-top: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.content h3:first-child {
+    margin-top: 0;
+}
+
+/* Petite barre décorative sous les grands titres */
+.content h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+.content p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    text-align: justify;
+}
+
+.content ul {
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+
+.content ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+}
+
+.objective-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    text-align: justify; 
+    margin-bottom: 10px;
+}
+
+/* 5. Interactivité - Bouton Thème */
+#toggle-dark-mode {
+    display: block;          
+    margin: 30px auto 0 auto;       
+    padding: 8px 16px;       
+    font-size: 0.85rem;      
+    cursor: pointer;         
+    border-radius: 20px;     
+    border: 1px solid var(--accent-color); 
+    background-color: transparent; 
+    color: var(--text-color);      
+    transition: all 0.3s ease;     
+}
+
+#toggle-dark-mode:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* 6. Mode Sombre (Dark Theme) */
+body.dark-theme {
+    background-color: #121212;
+    --text-color: #ffffff;      
+    --text-muted: #dcdcdc;      
+    --primary-color: #4fc3f7;   
+}
+
+body.dark-theme .cv-container {
+    background: #1e1e1e;
+}
+
+body.dark-theme .sidebar {
+    background-color: #252526;
+    border-right-color: #333333;
+}
+
+body.dark-theme p, 
+body.dark-theme li, 
+body.dark-theme h1, 
+body.dark-theme h2, 
+body.dark-theme h3 {
+    color: var(--text-color);
+}
+
+body.dark-theme h1,
+body.dark-theme h3 {
+    color: var(--primary-color);
+}
+
+body.dark-theme a {
+    color: #4fc3f7; 
+}
+
+body.dark-theme a:hover {
+    color: var(--accent-color);
+}
+
+body.dark-theme .objective-text strong {
+    color: var(--accent-color);
+}
+
+body.dark-theme .objective-text em {
+    color: #4fc3f7;
+    font-style: normal;
+    font-weight: 500;
+}
+
+body.dark-theme #toggle-dark-mode {
+    color: #ffffff;
+    border-color: var(--accent-color);
+}
+
+/* 7. Responsive Design (Mobile) */
+@media (max-width: 768px) {
+    .cv-container {
+        grid-template-columns: 1fr; 
+    }
+    
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+    }
+    
+    body {
+        padding: 0;
+    }
+    
+    .cv-container {
+        border-radius: 0;
+    }
+}
+/* Ce code s'active uniquement lors de la génération du PDF ou de l'impression */
+@media print {
+    /* Force le fond blanc et le texte sombre peu importe le mode actif */
+    body, body.dark-theme, .cv-container, .sidebar {
+        background: #ffffff !important;
+        color: #333333 !important;
+    }
+    
+    /* Masque le bouton Mode Sombre pour qu'il n'apparaisse pas sur le PDF */
+    #toggle-dark-mode {
+        display: none !important;
+    }
+
+    /* Remet les titres dans une couleur sombre et lisible sur papier */
+    h1, h2, h3, body.dark-theme h1, body.dark-theme h3 {
+        color: #2c3e50 !important;
+    }
+    
+    /* Force les liens à s'afficher en noir (sans bleu fluo) */
+    a, body.dark-theme a {
+        color: #333333 !important;
+        text-decoration: none !important;
+    }
+}

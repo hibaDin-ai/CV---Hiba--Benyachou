@@ -1,48 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CV - Hiba Benyachou</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
-    <div>
-        <img src="image/OIP.webp" alt="fleur" id="profile">
-        <h1 id="title">HIBA BENYACHOU</h1>
-        <h2>étudiante en informatique</h2>
-        <h3>Contact</h3>
-        <p><strong>Email:</strong> hiba.benyachou@example.com</p>
-        <p><strong>Phone:</strong> +212 123 456 789</p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hiba-benyachou">linkedin.com/in/hiba-benyachou</a></p>
-        <h3>langues</h3>
-        <ul>
-            <li>Français</li>
-            <li>Anglais</li>
-            <li>Arabe</li>
-        </ul>
-    </div>
-    <div>
-        <h3>Formation</h3>
-        <ul>
-            <li>DEUG en MIP</li>
-            <li>Baccalauréat en sciences mathématiques B</li>
-        </ul>
-         <h3>Compétences</h3>
-        <ul>
-            <li>Programmation: Python, C, C++ (niveau intermédiaire)</li>
-            <li>Développement Web: HTML, CSS, JavaScript (niveau intermédiaire)</li>
-            <li>Base de données: SQL (niveau intermédiaire)</li>
-        </ul> 
-        <h3>Projet</h3>
-        <ul>
-            <li>Développement d'une application calculatrice en Python avec Tkinter</li>
-            <li>CV en ligne avec HTML, CSS et JavaScript</li>
-            <li>Projet MIP:Assistant de Planification Intelligent
-                 en C++ avec Interface Graphique Qt</li>
-        </ul>
-        <h3>Objetives</h3>
-        <p>Je recherche un poste de developpeur en informatique.</p>
-                
-    </div> 
+    <main class="cv-container">
+
+        <!-- Colonne de Gauche : Barre Latérale -->
+        <aside class="sidebar">
+            <img src="image/image.png" alt="Photo de Hiba Benyachou" id="profile">
+            <h1 id="title">HIBA BENYACHOU</h1>
+            <h2>Étudiante en Mathématiques-Informatique</h2>
+            
+            <h3>Contact</h3>
+            <p><i class="fas fa-envelope icon"></i> <a href="mailto:hiba.benyachou@example.com">hiba.benyachou@example.com</a></p>
+            <p><i class="fas fa-phone icon"></i> <a href="tel:0787603503">0787603503</a></p>
+
+            <h3>Réseaux</h3>
+            <div class="social-links">
+                <p><a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i> hibaDin-ai</a></p>
+                <p><a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i> Hiba Bnicho</a></p>
+            </div>
+
+            <h3>Langues</h3>
+            <ul>
+                <li>Français : Courant</li>
+                <li>Anglais : Technique</li>
+                <li>Arabe : Langue maternelle</li>
+            </ul>
+            <button id="toggle-dark-mode">Mode Sombre</button>
+        </aside>
+
+        <!-- Colonne de Droite : Contenu Principal -->
+        <section class="content">
+            
+            <h3>Objectif Professionnel</h3>
+            <p class="objective-text">
+                Actuellement en DEUG MIP, je souhaite intégrer le cycle d'ingénieur de l'<strong>ENSAK</strong> afin de spécialiser mon parcours dans les domaines de la <strong>Data Science</strong> et de l'<strong>Intelligence Artificielle</strong>. Passionnée par la modélisation mathématique et le développement logiciel, mon objectif est d'acquérir une expertise technique solide pour concevoir des solutions innovantes basées sur la valorisation des données.
+            </p>
+
+            <h3>Formation Académique</h3>
+            <ul>
+                <li><strong>DEUG en MIP</strong> (Filière : Ingénierie Informatique et IA) – FP Khouribga</li>
+                <li><strong>Baccalauréat Scientifique</strong> (Sciences Mathématiques B)</li>
+            </ul>
+
+            <h3>Compétences Techniques</h3>
+            <ul>
+                <li><strong>Langages de Programmation :</strong> Python, C, Programmation Orientée Objet (POO) en C++</li>
+                <li><strong>Ingénierie Web :</strong> Architecture Front-End (HTML5, CSS3, JavaScript)</li>
+                <li><strong>Gestion de Données :</strong> Modélisation et requêtage de bases de données (SQL)</li>
+                <li><strong>Fondations Informatiques :</strong> Algorithmique avancée, structures de données complexes</li>
+                <li><strong>Génie Logiciel & Outils :</strong> Gestion de versions (Git, GitHub), Modélisation UML, VS Code</li>
+                <li><strong>Système d'Exploitation :</strong> Administration et environnement Linux</li>
+            </ul>
+
+            <h3>Projets Académiques & Réalisations</h3>
+            <ul>
+                <li><strong>Assistant de Planification Intelligent :</strong> Conception et développement en C++ avec une interface graphique interactive sous le framework Qt.</li>
+                <li><strong>Application Calculatrice Dynamique :</strong> Implémentation d'une logique de calcul en Python avec modélisation de l'interface utilisateur via la bibliothèque Tkinter.</li>
+                <li><strong>Portfolio Numérique (CV en ligne) :</strong> Intégration d'un site web responsive et interactif utilisant HTML, CSS et JavaScript.</li>
+            </ul>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
