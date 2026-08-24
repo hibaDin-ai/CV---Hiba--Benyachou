@@ -39,7 +39,8 @@ a:hover {
     margin: 0 auto;
     background: var(--content-bg);
     display: grid;
-    grid-template-columns: 300px 1fr; /* Sidebar fixe à 300px, le reste prend l'espace */
+    grid-template-columns: 300px 1fr; 
+    /* Sidebar fixe à 300px, le reste prend l'espace */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
