@@ -6,12 +6,12 @@
 }
 
 :root {
-    --primary-color: #2c3e50;    /* Bleu sombre pour les titres */
-    --accent-color: #16a085;     /* Vert d'eau pour les éléments importants */
-    --sidebar-bg: #f8f9fa;       /* Fond clair pour la colonne de gauche */
-    --content-bg: #ffffff;       /* Fond blanc pour le contenu principal */
-    --text-color: #333333;       /* Couleur du texte principal */
-    --text-muted: #555555;       /* Couleur du texte secondaire */
+    --primary-color: #2c3e50;    
+    --accent-color: #16a085;     
+    --sidebar-bg: #f8f9fa;       
+    --content-bg: #ffffff;       
+    --text-color: #333333;       
+    --text-muted: #555555;       
 }
 
 body {
@@ -22,7 +22,7 @@ body {
     padding: 40px 20px;
 }
 
-/* Style global pour les liens du CV */
+
 a {
     color: var(--accent-color);
     text-decoration: none;
@@ -33,27 +33,27 @@ a:hover {
     color: var(--primary-color);
 }
 
-/* 2. Layout Structure (Mise en page) */
+
 .cv-container {
     max-width: 950px;
     margin: 0 auto;
     background: var(--content-bg);
     display: grid;
     grid-template-columns: 300px 1fr; 
-    /* Sidebar fixe à 300px, le reste prend l'espace */
+    
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
 }
 
-/* 3. Sidebar Styles (Colonne de gauche) */
+
 .sidebar {
     background-color: var(--sidebar-bg);
     padding: 40px 30px;
     border-right: 1px solid #dee2e6;
 }
 
-/* Style pour agrandir et centrer la photo */
+
 #profile {
     width: 140px;          
     height: 140px;         
@@ -98,7 +98,7 @@ a:hover {
 }
 
 .sidebar p i {
-    width: 20px; /* Aligne verticalement les icônes FontAwesome */
+    width: 20px; 
     color: var(--accent-color);
 }
 
@@ -121,7 +121,7 @@ a:hover {
     left: 0;
 }
 
-/* 4. Content Styles (Colonne de droite) */
+
 .content {
     padding: 40px;
 }
@@ -139,7 +139,7 @@ a:hover {
     margin-top: 0;
 }
 
-/* Petite barre décorative sous les grands titres */
+
 .content h3::after {
     content: "";
     position: absolute;
@@ -175,7 +175,7 @@ a:hover {
     margin-bottom: 10px;
 }
 
-/* 5. Interactivité - Bouton Thème */
+
 #toggle-dark-mode {
     display: block;          
     margin: 30px auto 0 auto;       
@@ -194,7 +194,7 @@ a:hover {
     color: white;
 }
 
-/* 6. Mode Sombre (Dark Theme) */
+
 body.dark-theme {
     background-color: #121212;
     --text-color: #ffffff;      

@@ -1,7 +1,7 @@
-// 1. Sélection du bouton
+
 const darkModeBtn = document.getElementById('toggle-dark-mode');
 
-// 2. Écoute de l'événement "click"
+
 darkModeBtn.addEventListener('click', () => {
     // Échange la classe "dark-theme" sur la balise <body>
     document.body.classList.toggle('dark-theme');
